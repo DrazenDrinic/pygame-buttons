@@ -47,7 +47,7 @@ running = True  # Main loop control
 click_counter = 0
 
 # BUTTONS
-start_button = Button(200,550,120,60,"Start",knewava_font,RED_COLOR, YELLOW_COLOR, GREEN_COLOR,(0,0,0))
+start_button = Button(x=200,y=550,width=120,height=60,text="Click Me",font=knewava_font,button_color=RED_COLOR, hover_color=YELLOW_COLOR,click_color= GREEN_COLOR,text_color=(0,0,0))
 
 # FUNCTIONS
 def draw_text(text, font, text_color, x, y, centered_x=False):

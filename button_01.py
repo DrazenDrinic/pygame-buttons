@@ -6,7 +6,7 @@ import pygame  # Game library
 
 class Button:
     def __init__(self, x, y, width, height, text, font,
-                 button_col, hover_color, click_color, text_color):
+                 button_color, hover_color, click_color, text_color):
         """
         Button Constructor
 
@@ -14,7 +14,7 @@ class Button:
         width, height  → Minimum size of button
         text           → Text displayed on button
         font           → Pygame font object
-        button_col     → Default color
+        button_color   → Default color
         hover_color    → Color when mouse is over button
         click_color    → Color while mouse button is pressed
         text_color     → Color of text
@@ -33,7 +33,7 @@ class Button:
         self.font = font
 
         # Colors
-        self.button_col = button_col
+        self.button_col = button_color
         self.hover_col = hover_color
         self.click_col = click_color
         self.text_col = text_color
