@@ -17,6 +17,18 @@ pygame.display.set_caption("Program Name")  # Window title
 clock = pygame.time.Clock()  # Controls FPS
 FPS = 60
 
+# FONTS
+# Knewava
+knewava_font = pygame.font.SysFont("Knewave", 40)
+# Ravie
+ravie_font = pygame.font.SysFont("Ravie", 40)
+# Comic Sans MS
+comic_sans_ms_font = pygame.font.SysFont("Comic Sans MS", 40)
+# Courgette
+forte_font = pygame.font.SysFont("Forte", 40)
+# Epilog
+epilog_font = pygame.font.SysFont("Epilog", 40)
+
 # COLORS
 BLUE_COLOR = (11, 43, 65)
 GREEN_COLOR = (25, 60, 65)
@@ -28,6 +40,15 @@ BG_COLOR = (50, 100, 150)
 # VARIABLES
 
 running = True  # Main loop control
+
+# FUNCTIONS
+def draw_text(text, font, text_color, x, y, centered_x=False):
+    img = font.render(text, True, text_color)
+
+    if centered_x:
+        x = (screen.get_width() - img.get_width()) // 2
+
+    screen.blit(img, (x, y))
 
 # ----------------------------
 # MAIN LOOP
@@ -63,6 +84,13 @@ while running:
 
     # Render everything
     screen.fill(BG_COLOR)  # Clear screen every frame
+
+    # Other rendering
+    draw_text("This is Knewave font.", knewava_font, RED_COLOR, 50, 100, True)
+    draw_text("This is Ravie font.", ravie_font, RED_COLOR, 50, 200, True)
+    draw_text("This is Comic Sans MS font.", comic_sans_ms_font, RED_COLOR, 50, 300, True)
+    draw_text("This is Forte font.", forte_font, RED_COLOR, 50, 400, True)
+    draw_text("This is Epilog.", epilog_font, RED_COLOR, 50, 500, True)
 
     pygame.display.update()  # Show frame
 
