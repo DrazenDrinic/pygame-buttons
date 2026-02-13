@@ -44,6 +44,8 @@ BG_COLOR = (50, 100, 150)
 
 running = True  # Main loop control
 
+click_counter = 0
+
 # BUTTONS
 start_button = Button(200,550,120,60,"Start",knewava_font,RED_COLOR, YELLOW_COLOR, GREEN_COLOR,(0,0,0))
 
@@ -92,13 +94,12 @@ while running:
     screen.fill(BG_COLOR)  # Clear screen every frame
 
     # Other rendering
-    draw_text("This is Knewave font.", knewava_font, RED_COLOR, 50, 100, True)
-    draw_text("This is Ravie font.", ravie_font, RED_COLOR, 50, 200, True)
-    draw_text("This is Comic Sans MS font.", comic_sans_ms_font, RED_COLOR, 50, 300, True)
-    draw_text("This is Forte font.", forte_font, RED_COLOR, 50, 400, True)
-    draw_text("This is Epilog.", epilog_font, RED_COLOR, 50, 500, True)
+    if start_button.draw(screen=screen):
+        click_counter += 1
 
-    start_button.draw(screen=screen)
+    draw_text(f"You clicked START: {click_counter} times.", knewava_font, RED_COLOR, 50, 100, True)
+    
+
 
     pygame.display.update()  # Show frame
 
