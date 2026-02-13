@@ -46,6 +46,17 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
+        # KEYDOWN happens ONCE when a key is pressed
+        if event.type == pygame.KEYDOWN:
+
+            # Press ESC to quit
+            if event.key == pygame.K_ESCAPE:
+                running = False
+
+        # KEYUP happens ONCE when a key is released
+        if event.type == pygame.KEYUP:
+            pass  # Placeholder for future logic
+
     # ----------------------------
     # RENDERING
     # ----------------------------
