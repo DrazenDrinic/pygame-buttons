@@ -1,5 +1,8 @@
 import pygame  # Game library
 
+# import
+from button_01 import Button
+
 # ----------------------------
 # SETUP
 # ----------------------------
@@ -40,6 +43,9 @@ BG_COLOR = (50, 100, 150)
 # VARIABLES
 
 running = True  # Main loop control
+
+# BUTTONS
+start_button = Button(200,550,120,60,"Start",knewava_font,RED_COLOR, YELLOW_COLOR, GREEN_COLOR,(0,0,0))
 
 # FUNCTIONS
 def draw_text(text, font, text_color, x, y, centered_x=False):
@@ -91,6 +97,8 @@ while running:
     draw_text("This is Comic Sans MS font.", comic_sans_ms_font, RED_COLOR, 50, 300, True)
     draw_text("This is Forte font.", forte_font, RED_COLOR, 50, 400, True)
     draw_text("This is Epilog.", epilog_font, RED_COLOR, 50, 500, True)
+
+    start_button.draw(screen=screen)
 
     pygame.display.update()  # Show frame
 
