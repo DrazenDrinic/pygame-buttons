@@ -18,7 +18,12 @@ clock = pygame.time.Clock()  # Controls FPS
 FPS = 60
 
 # COLORS
-BG_COLOR = (50,100,150)
+BLUE_COLOR = (11, 43, 65)
+GREEN_COLOR = (25, 60, 65)
+RED_COLOR = (89, 28, 33)
+YELLOW_COLOR = (242, 183, 5)
+
+BG_COLOR = (50, 100, 150)
 
 # VARIABLES
 
