@@ -68,3 +68,12 @@ while running:
 
     # FPS LIMIT
     clock.tick(FPS)
+
+# ----------------------------
+# CLEANUP
+# ----------------------------
+
+pygame.quit()  # Close pygame safely
+quit()         # Exit program
+
+
